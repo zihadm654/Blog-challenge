@@ -1,0 +1,30 @@
+.showcase {
+  background: $dark__gray;
+  @include grid;
+  padding: 0 4rem;
+  border-radius: 0 5rem;
+  &__left {
+    @include media(sm) {
+      grid-column: 1/13;
+    }
+    position: relative;
+    grid-column: span 6;
+    overflow: hidden;
+    img {
+      height: 25rem;
+      width: 100%;
+      object-fit: contain;
+    }
+  }
+  &__right {
+    @include media(sm) {
+      grid-column: 1/13;
+    }
+    grid-column: span 6;
+    align-self: center;
+    color: $text;
+    h5 {
+      padding: 2rem 0;
+    }
+  }
+}

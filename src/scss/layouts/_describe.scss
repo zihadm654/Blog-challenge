@@ -1,0 +1,36 @@
+.describe {
+  @include media(sm) {
+    padding: 2.2rem;
+  }
+  margin-top: 5rem;
+  padding: 6rem 8rem;
+  // background-image: url(../../../public/images/bg-pattern-circles.svg);
+  h3 {
+    text-align: center;
+  }
+  .layout {
+    padding-top: 10rem;
+    @include grid;
+    &__left {
+      @include media(sm) {
+        grid-column: 1/13;
+      }
+      grid-column: span 6;
+      h5 {
+        font-weight: bold;
+        padding: 2rem 0;
+      }
+    }
+    &__right {
+      @include media(sm) {
+        grid-column: 1/13;
+      }
+      grid-column: span 6;
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}

@@ -1,0 +1,42 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  // cursor: none;
+}
+html {
+  font-size: 62.5%;
+  @include media(sm) {
+    font-size: 37.51%;
+  }
+  @include media(md) {
+    font-size: 44%;
+  }
+  @include media(lg) {
+    font-size: 56.25%;
+  }
+  @include media(xxlg) {
+    font-size: 64.5%;
+  }
+}
+body {
+  box-sizing: border-box;
+  font-family: $main__font;
+  color: $body;
+}
+a {
+  color: $body;
+}
+span {
+  font-weight: 700;
+}
+header,
+.hero {
+  @include media(xxlg) {
+    max-width: 150em;
+    margin: 0 auto;
+  }
+  width: 100%;
+  max-width: 135em;
+  margin: 0 auto;
+}
