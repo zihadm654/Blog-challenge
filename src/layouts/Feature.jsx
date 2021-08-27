@@ -1,11 +1,11 @@
 import React from 'react'
-
+import Img from '../images/illustration-laptop-desktop.svg'
 const Feature = () => {
   return (
     <div>
       <div className="feature">
         <div className="feature__left">
-          <img src="./images/illustration-laptop-desktop.svg" alt="" />
+          <img src={Img} alt="" />
         </div>
         <div className="feature__right">
           <h5>Free, open, simple</h5>

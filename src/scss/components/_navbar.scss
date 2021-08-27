@@ -1,12 +1,14 @@
 nav {
   @include flex(space-between);
   width: 100%;
-  padding: 1.5rem 0;
   background: $secondary__gradient;
   .nav__left {
     @include flex(center);
-    h4 {
-      padding-right: 1.5rem;
+    h3 {
+      color: #fff;
+      padding-right: 4.5rem;
+      font-weight: 700;
+      font-size: $lr;
     }
     select {
       background: transparent;

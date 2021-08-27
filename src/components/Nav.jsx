@@ -5,7 +5,7 @@ const Nav = () => {
     <>
       <nav>
         <div className="nav__left">
-          <h4>Blogr</h4>
+          <h3>Blogr</h3>
           <div className="links">
             <select name="product" id="">
               <option value="product">

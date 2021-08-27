@@ -31,12 +31,14 @@ span {
   font-weight: 700;
 }
 header,
-.hero {
+.hero__content,
+.describe,
+.feature,
+footer,
+nav,
+.showcase {
   @include media(xxlg) {
     max-width: 150em;
     margin: 0 auto;
   }
-  width: 100%;
-  max-width: 135em;
-  margin: 0 auto;
 }

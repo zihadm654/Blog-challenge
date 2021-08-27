@@ -1,7 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-
+const webpack = require('webpack');
 module.exports = {
   output: {
     path: path.join(__dirname, '/dist'),
@@ -9,6 +9,11 @@ module.exports = {
   },
 
   devServer: {
+    // contentBase: path.join(__dirname, 'dist'),
+    historyApiFallback: true,
+    open: true,
+    compress: true,
+    hot: true,
     port: 3000,
   },
   module: {
@@ -30,7 +35,7 @@ module.exports = {
         },
       },
       {
-        test: /\.(s*)css$/,
+        test: /\.(scss|css)$/,
         use: ['style-loader', 'css-loader', 'sass-loader'],
       },
       {
@@ -39,8 +44,12 @@ module.exports = {
       },
     ],
   },
+  resolve: {
+    extensions: ['.jsx', '.js'],
+  },
   plugins: [
     new HtmlWebpackPlugin({ template: './public/index.html' }),
+    new webpack.HotModuleReplacementPlugin(),
     new MiniCssExtractPlugin(),
   ],
 };

@@ -1,13 +1,11 @@
 .hero {
   @include media(sm) {
-    height: 70rem;
     padding: 2.2rem;
   }
   position: relative;
   background-color: $secondary__gradient;
-  color: #000;
-  height: 55rem;
-  padding: 4rem 9rem;
+  color: #fff;
+  padding: 6rem 12rem;
   border-radius: 0 0 0 10rem;
   img {
     top: 0;
@@ -19,18 +17,20 @@
     z-index: -1;
   }
   // background-image: url('../../../public//images/bg-pattern-intro.svg');
-  .content {
+  &__content {
     z-index: 1;
     // @include flex(center);
     text-align: center;
     padding: 3rem 0;
     margin-top: 5rem;
     h2 {
-      padding: 3rem 0;
-      line-height: 1;
-    }
-    h5 {
       padding: 2rem 0;
+      line-height: 1;
+      font-family: $main__font;
+    }
+    p {
+      font-family: $body__font;
+      font-weight: 400;
     }
     button {
       margin-top: 5rem;
@@ -55,6 +55,13 @@
       &:hover {
         color: #fff;
         background: rgba(255, 255, 255, 0.3);
+      }
+    }
+    .learn__more {
+      color: #fff;
+      &:hover {
+        color: $cta__text;
+        background: #fff;
       }
     }
   }

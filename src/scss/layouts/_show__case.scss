@@ -1,18 +1,20 @@
 .showcase {
   background: $dark__gray;
   @include grid;
-  padding: 0 4rem;
+  padding: 8rem 12rem;
   border-radius: 0 5rem;
+  position: relative;
   &__left {
     @include media(sm) {
       grid-column: 1/13;
     }
-    position: relative;
     grid-column: span 6;
     overflow: hidden;
     img {
-      height: 25rem;
-      width: 100%;
+      top: -20%;
+      left: 7%;
+      position: absolute;
+      height: 42rem;
       object-fit: contain;
     }
   }
@@ -25,6 +27,9 @@
     color: $text;
     h5 {
       padding: 2rem 0;
+    }
+    p {
+      line-height: 1.5;
     }
   }
 }

@@ -1,10 +1,11 @@
 import React from 'react'
-
+import Img1 from '../images/illustration-editor-desktop.svg'
 const Describe = () => {
   return (
     <>
       <div className="describe">
         <h3>Designed for the future</h3>
+        <img src={Img1} alt="" />
         <div className="layout">
           <div className="layout__left">
             <h5>Intruducing an extensible editor</h5>
@@ -19,7 +20,6 @@ const Describe = () => {
             </p>
           </div>
           <div className="layout__right">
-            <img src="./images/bg-pattern-circles.svg" alt="" />
           </div>
         </div>
       </div>

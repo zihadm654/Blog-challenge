@@ -2,20 +2,33 @@
   @include media(sm) {
     padding: 2.2rem;
   }
+  padding: 0 13rem;
+  overflow: hidden;
   margin-top: 5rem;
-  padding: 6rem 8rem;
+  position: relative;
   // background-image: url(../../../public/images/bg-pattern-circles.svg);
   h3 {
     text-align: center;
   }
+  img {
+    position: absolute;
+    height: 55rem;
+    width: 55rem;
+    object-fit: cover;
+    right: -6%;
+    top: 15%;
+  }
   .layout {
-    padding-top: 10rem;
+    padding: 10rem 0;
     @include grid;
     &__left {
       @include media(sm) {
         grid-column: 1/13;
       }
       grid-column: span 6;
+      p {
+        line-height: 1.5;
+      }
       h5 {
         font-weight: bold;
         padding: 2rem 0;
@@ -26,11 +39,6 @@
         grid-column: 1/13;
       }
       grid-column: span 6;
-      img {
-        height: 100%;
-        width: 100%;
-        object-fit: cover;
-      }
     }
   }
 }

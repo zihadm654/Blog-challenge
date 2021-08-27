@@ -1,6 +1,8 @@
 .feature {
   @include grid;
-  padding: 4rem;
+  padding: 10rem 12rem;
+  margin: 6rem 0;
+  position: relative;
   &__left {
     @include media(sm) {
       grid-column: 1/13;
@@ -8,8 +10,11 @@
     grid-column: span 6;
     align-self: center;
     img {
-      height: 50rem;
-      width: 100%;
+      position: absolute;
+      top: 0%;
+      left: -13.5%;
+      height: 55rem;
+      object-fit: contain;
     }
   }
   &__right {
@@ -19,6 +24,7 @@
     align-self: center;
     grid-column: span 6;
     h5 {
+      font-weight: 700;
       padding: 2.5rem 0;
     }
   }

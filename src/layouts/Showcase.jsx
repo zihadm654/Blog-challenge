@@ -1,10 +1,10 @@
 import React from 'react'
-
+import Img from '../images/illustration-phones.svg'
 const Showcase = () => {
   return (
     <div className="showcase">
       <div className="showcase__left">
-        <img src="./images/illustration-phones.svg" alt="" />
+        <img src={Img} alt="" />
       </div>
       <div className="showcase__right">
         <h5>State of the Art Infrastructure</h5>

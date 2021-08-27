@@ -1,15 +1,17 @@
 import React from 'react'
+import Nav from '../components/Nav.jsx';
 
 const Hero = () => {
   return (
-    <>
-      <div className="content">
+    <section className="hero">
+      <Nav />
+      <div className="hero__content">
         <h2>A modern publishing platform</h2>
-        <h5>Grow your audience and build your online brand</h5>
+        <p>Grow your audience and build your online brand</p>
         <button className="free">Start for Free</button>
         <button className="learn__more">Learn More</button>
       </div>
-    </>
+    </section>
   )
 }
 
