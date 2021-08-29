@@ -7,7 +7,7 @@ const Showcase = () => {
         <img src={Img} alt="" />
       </div>
       <div className="showcase__right">
-        <h5>State of the Art Infrastructure</h5>
+        <h4>State of the Art Infrastructure</h4>
         <p>With reliability and speed in mind, worldwide data centers provide the backbone for ultra-fast connectivity.
           This ensures your site will load instantly, no matter where your readers are, keeping your site competitive.
         </p>

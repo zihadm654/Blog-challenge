@@ -4,6 +4,9 @@ footer {
   padding: 4rem 12rem;
   @include grid;
   color: $text;
+  @include media(sm) {
+    padding: 3rem 2.2rem;
+  }
   h4 {
     font-weight: 500;
   }

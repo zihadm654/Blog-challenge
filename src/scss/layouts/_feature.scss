@@ -3,29 +3,43 @@
   padding: 10rem 12rem;
   margin: 6rem 0;
   position: relative;
+  overflow: hidden;
+  @include media(sm) {
+    padding: 3rem 2rem;
+    text-align: center;
+  }
   &__left {
     @include media(sm) {
       grid-column: 1/13;
+      height: 40rem;
     }
     grid-column: span 6;
     align-self: center;
     img {
       position: absolute;
       top: 0%;
-      left: -13.5%;
-      height: 55rem;
+      left: -13.2%;
+      height: 50rem;
       object-fit: contain;
+      @include media(sm) {
+        height: 44rem;
+        left: 10%;
+      }
     }
   }
   &__right {
+    padding: 0 2rem;
     @include media(sm) {
       grid-column: 1/13;
     }
     align-self: center;
     grid-column: span 6;
-    h5 {
+    h4 {
       font-weight: 700;
       padding: 2.5rem 0;
+    }
+    p {
+      line-height: 1.5;
     }
   }
 }

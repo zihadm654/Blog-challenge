@@ -1,6 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 const Nav = () => {
+  const [open, setOpen] = useState(false)
+  const clickHandler = () => {
+    console.log("clicked");
+    setOpen(true)
+  }
   return (
     <>
       <nav>
@@ -58,7 +63,10 @@ const Nav = () => {
           </div>
         </div>
         <div className="nav__right">
-          <div className="menu">
+          <div
+            className={open ? "menu open" : "menu"}
+            onClick={clickHandler}
+          >
             <span></span>
             <span></span>
             <span></span>

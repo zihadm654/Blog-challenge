@@ -7,13 +7,13 @@
 html {
   font-size: 62.5%;
   @include media(sm) {
-    font-size: 37.51%;
+    font-size: 39.51%;
   }
   @include media(md) {
-    font-size: 44%;
+    font-size: 46%;
   }
   @include media(lg) {
-    font-size: 56.25%;
+    font-size: 58.25%;
   }
   @include media(xxlg) {
     font-size: 64.5%;
