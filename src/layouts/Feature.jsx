@@ -1,11 +1,13 @@
 import React from 'react'
 import Img from '../images/illustration-laptop-desktop.svg'
+import Img1 from '../images/illustration-laptop-mobile.svg'
 const Feature = () => {
   return (
     <div>
       <div className="feature">
         <div className="feature__left">
-          <img src={Img} alt="" />
+          <img src={Img} alt="" className="large" />
+          <img src={Img1} alt="" className="mobile" />
         </div>
         <div className="feature__right">
           <h4>Free, open, simple</h4>

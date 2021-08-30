@@ -1,7 +1,7 @@
 nav {
   @include flex(space-between);
   width: 100%;
-  background: $secondary__gradient;
+  z-index: 110;
   .nav__left {
     @include flex(center);
     h3 {
@@ -70,18 +70,6 @@ nav {
         width: 5rem;
         background-color: #fff;
       }
-      &.open {
-        padding-bottom: 1rem;
-        span:nth-child(2) {
-          display: none;
-        }
-        span:nth-child(1) {
-          transform: translateY(9px) rotate(45deg);
-        }
-        span:nth-child(3) {
-          transform: translate(0) rotate(-45deg);
-        }
-      }
     }
     button {
       @include media(md) {
@@ -117,5 +105,17 @@ nav {
       }
       color: $text;
     }
+  }
+}
+.open {
+  padding-bottom: 1rem;
+  span:nth-child(2) {
+    display: none;
+  }
+  span:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+  }
+  span:nth-child(3) {
+    transform: translate(0) rotate(-45deg);
   }
 }

@@ -22,9 +22,21 @@
       height: 50rem;
       object-fit: contain;
       @include media(sm) {
-        height: 44rem;
-        left: 10%;
+        height: 48rem;
+        left: -10%;
       }
+    }
+    .large {
+      @include media(sm) {
+        display: none;
+      }
+      display: block;
+    }
+    .moblie {
+      @include media(sm) {
+        display: block;
+      }
+      display: none;
     }
   }
   &__right {

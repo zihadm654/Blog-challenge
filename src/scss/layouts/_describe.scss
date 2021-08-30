@@ -11,18 +11,6 @@
     text-align: center;
     font-weight: 700;
   }
-  img {
-    position: absolute;
-    height: 55rem;
-    width: 55rem;
-    object-fit: cover;
-    right: -10%;
-    top: 5%;
-    @include media(sm) {
-      right: 8%;
-      top: 9%;
-    }
-  }
   .layout {
     padding: 10rem 0;
     @include grid;
@@ -48,6 +36,30 @@
       }
       height: 45rem;
       grid-column: span 6;
+      img {
+        position: absolute;
+        height: 55rem;
+        object-fit: cover;
+        right: -10%;
+        top: 5%;
+        @include media(sm) {
+          right: 0%;
+          top: 10%;
+          height: 45rem;
+        }
+      }
+      .first__img {
+        display: block;
+        @include media(sm) {
+          display: none;
+        }
+      }
+      .second__img {
+        display: none;
+        @include media(sm) {
+          display: block;
+        }
+      }
     }
   }
 }

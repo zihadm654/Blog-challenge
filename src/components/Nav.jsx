@@ -1,11 +1,7 @@
 import React, { useState } from 'react'
 
 const Nav = () => {
-  const [open, setOpen] = useState(false)
-  const clickHandler = () => {
-    console.log("clicked");
-    setOpen(true)
-  }
+  const [menu, setMenu] = useState(false)
   return (
     <>
       <nav>
@@ -64,8 +60,8 @@ const Nav = () => {
         </div>
         <div className="nav__right">
           <div
-            className={open ? "menu open" : "menu"}
-            onClick={clickHandler}
+            className={menu ? "menu open" : "menu"}
+            onClick={() => setMenu(prev => !prev)}
           >
             <span></span>
             <span></span>
