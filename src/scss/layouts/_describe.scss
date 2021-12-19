@@ -13,7 +13,7 @@
   }
   .layout {
     padding: 10rem 0;
-    @include grid;
+    @include grid();
     &__left {
       padding: 0 2rem;
       @include media(sm) {

@@ -3,6 +3,7 @@
     padding: 2.2rem;
   }
   position: relative;
+  // background-image:url(../../images/bg-pattern-intro.svg) ;
   background-color: $secondary__gradient;
   color: #fff;
   padding: 6rem 13rem;
@@ -53,12 +54,14 @@
     .free {
       background: #fff;
       color: $cta__text;
+      transition: 200ms ease-out;
       &:hover {
         color: #fff;
         background: rgba(255, 255, 255, 0.3);
       }
     }
     .learn__more {
+      transition: 200ms ease-out;
       color: #fff;
       &:hover {
         color: $cta__text;

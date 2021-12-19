@@ -1,6 +1,6 @@
 .showcase {
   background: $dark__gray;
-  @include grid;
+  @include grid();
   padding: 8rem 13rem;
   border-radius: 0 5rem;
   position: relative;

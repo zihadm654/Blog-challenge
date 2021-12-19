@@ -73,13 +73,14 @@ nav {
       border-radius: 3rem;
       background: #fff;
       padding: 1rem 2.5rem;
+      transition: 200ms ease-out;
       &:hover {
         color: $text;
         background: rgba(255, 255, 255, 0.212);
       }
     }
     .login {
-      transition: 300ms ease-out;
+      transition: 200ms ease-out;
       border-radius: 3rem;
       padding: 1rem 3rem;
       &:hover {

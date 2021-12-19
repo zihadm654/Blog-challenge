@@ -2,7 +2,7 @@ footer {
   border-radius: 0 5rem 0 0;
   background-color: $footer__bg;
   padding: 4rem 12rem;
-  @include grid;
+  @include grid();
   color: $text;
   @include media(sm) {
     padding: 3rem 2.2rem;
@@ -24,7 +24,7 @@ footer {
       padding: 0.25rem 0;
     }
     grid-column: span 3;
-    // justify-self: center;
+    justify-self: center;
     @include flex(flex-start);
     align-items: flex-start;
     flex-direction: column;
