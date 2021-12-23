@@ -1,27 +1,29 @@
 footer {
-  border-radius: 0 5rem 0 0;
+  border-radius: 0 10rem 0 0;
   background-color: $footer__bg;
-  padding: 4rem 12rem;
+  padding: 4.5rem 12rem;
+  @include media(sm){
+    padding: 4rem;
+  }
+  .footer__content{
   @include grid();
   color: $text;
   @include media(sm) {
-    padding: 3rem 2.2rem;
+    padding: 3rem 2.3rem;
   }
-  h4 {
-    font-weight: 600;
+  h2 {
+    font-family: $body__font;
+    font-size: $xlr;
+    font-weight: 500;
   }
-  h4,
+  h2,
   .product__list,
   .company__list,
   .contact__list {
-    h5 {
-      font-weight: 600;
-      padding-bottom: 2rem;
-    }
-    a {
-      color: $text;
-      text-decoration: none;
-      padding: 0.25rem 0;
+    @include media(sm){
+      grid-column: 1/13;
+      justify-self: center;
+      align-items: center;
     }
     grid-column: span 3;
     justify-self: center;
@@ -29,13 +31,22 @@ footer {
     align-items: flex-start;
     flex-direction: column;
     padding: 2rem 0;
+    h4 {
+      font-size: 2rem;
+      font-weight: 600;
+      padding-bottom: 3rem;
+    }
+    a {
+      color: $footer__text;
+      font-size: 1.8rem;
+      text-decoration: none;
+      padding: 0.65rem 0;
+    }
   }
-}
-.attribution {
-  font-size: 11px;
-  text-align: center;
-}
-
-.attribution a {
-  color: hsl(228, 45%, 44%);
-}
+    h2{
+      padding: 0rem;
+      @include media(sm){
+        padding-bottom: 3rem;
+      }
+  }
+}}

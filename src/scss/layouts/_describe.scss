@@ -1,28 +1,51 @@
 .describe {
+  position: relative;
+  background-image: url("../images/illustration-editor-desktop.svg");
+  background-repeat: no-repeat;
+  background-position: 135% 100%, 0% 0%;
+  background-size: 56% 92%, 100% 100%;
+@include media(sm){
+  background-position: 40% 16%, 0% 0%;
+  background-size: 106% 26%, 100% 100%;
+  background-image: url("../images/illustration-editor-mobile.svg");
+}
+  .describe__content{
   @include media(sm) {
-    padding: 4rem 2rem;
+    padding: 3rem 4rem;
     text-align: center;
   }
-  padding: 4rem 13rem;
-  overflow: hidden;
-  margin: 5rem 0;
-  position: relative;
+  padding: 8rem;
+  padding-top: 12rem;
   h3 {
-    text-align: center;
+    @include media(sm){
+      font-size: 2.8rem;
+    }
+    font-size: 3.6rem;
     font-weight: 700;
+    color: $heading;
+    text-align: center;
   }
   .layout {
-    padding: 10rem 0;
+    padding: 6rem 0;
     @include grid();
     &__left {
       padding: 0 2rem;
+      grid-column: span 6;
       @include media(sm) {
         grid-column: 1/13;
         order: 2;
+        padding: 0;
       }
-      grid-column: span 6;
+      h2{
+        color: $heading;
+        line-height: 1;
+        font-size: 2.8rem;
+        padding: 2rem 0;
+      }
       p {
-        line-height: 1.5;
+        font-size: 1.6rem;
+        line-height: 1.6;
+        font-weight: 500;
       }
       h5 {
         font-weight: bold;
@@ -33,33 +56,11 @@
       @include media(sm) {
         grid-column: 1/13;
         order: 1;
+        padding: 0;
+        height: 32rem;
       }
-      height: 45rem;
       grid-column: span 6;
-      img {
-        position: absolute;
-        height: 55rem;
-        object-fit: cover;
-        right: -10%;
-        top: 5%;
-        @include media(sm) {
-          right: 0%;
-          top: 10%;
-          height: 45rem;
-        }
-      }
-      .first__img {
-        display: block;
-        @include media(sm) {
-          display: none;
-        }
-      }
-      .second__img {
-        display: none;
-        @include media(sm) {
-          display: block;
-        }
-      }
     }
   }
+}
 }

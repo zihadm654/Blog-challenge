@@ -1,72 +1,72 @@
 .hero {
   @include media(sm) {
-    padding: 2.2rem;
+    padding: 3rem 2.5rem;
+    height: 85vh;
+    background-position: 25% 54%,0% 0%;
   }
+  height: 80vh;
+  padding: 3rem 8rem;
   position: relative;
-  // background-image:url(../../images/bg-pattern-intro.svg) ;
-  background-color: $secondary__gradient;
+  background-image:url("../images/bg-pattern-intro.svg"),linear-gradient(135deg,$primary__gradient,$secondary__gradient) ;
   color: #fff;
-  padding: 6rem 13rem;
-  overflow: hidden;
+  background-size: 245% 525%, 100% 100%;
+  background-position: 25% 52%, 0% 0%;
+  background-repeat: no-repeat, no-repeat;
   border-radius: 0 0 0 10rem;
   &__content {
-    z-index: -1;
-    img {
-      top: -20%;
-      left: -2%;
-      position: absolute;
-      width: 150%;
-      height: 150%;
-      object-fit: cover;
-      z-index: -1;
-    }
-    // @include flex(center);
     text-align: center;
-    padding: 3rem 0;
-    margin-top: 5rem;
+    color: $text;
+    padding-top: 6.5rem;
+    @include media(sm){
+      padding-top: 10rem;
+    }
     h2 {
-      z-index: 100;
-      padding: 2rem 0;
-      line-height: 1;
+      padding: 2.5rem 0;
+      font-weight: 600;
       font-family: $main__font;
-    }
-    p {
-      font-family: $body__font;
-      font-weight: 400;
-    }
-    button {
-      margin-top: 5rem;
-      background: transparent;
-      border: 2px solid #fff;
-      border-radius: 3rem;
-      font-size: $p;
-      padding: 2rem 3rem;
-      cursor: pointer;
-      &:not(last-child) {
-        margin-right: 2rem;
+      font-size: 5.508rem;
+      @include media(sm){
+        font-size: 3.4rem;
       }
     }
-    .learn__more {
-      &:hover {
-        background: #fff;
+    p {
+      font-size: 1.9rem;
+    }
+    .cta__btn{
+      @include media(sm){
+        justify-content: space-around;
+      }
+      @include flex(center);
+    button {
+      margin-top: 4.5rem;
+      border-radius: 5rem;
+      font-size: 1.6rem;
+      padding: 1.5rem;
+      font-weight: 700;
+      cursor: pointer;
+      border: none;
+      font-family: $body__font;
+      &:not(first-child){
+        margin-right: 1.5rem;
       }
     }
     .free {
-      background: #fff;
+      background-color: $text;
       color: $cta__text;
-      transition: 200ms ease-out;
       &:hover {
         color: #fff;
-        background: rgba(255, 255, 255, 0.3);
+        background-color: $cta__hover;
       }
     }
     .learn__more {
-      transition: 200ms ease-out;
-      color: #fff;
+      color: $text;
+      background: transparent;
+      border: 1px solid $text;
       &:hover {
         color: $cta__text;
         background: #fff;
       }
     }
+  }
   }
 }

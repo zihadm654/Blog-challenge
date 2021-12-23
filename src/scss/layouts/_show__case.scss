@@ -1,45 +1,65 @@
+
 .showcase {
-  background: $dark__gray;
-  @include grid();
-  padding: 8rem 13rem;
-  border-radius: 0 5rem;
   position: relative;
+  border-radius: 0 10rem;
+  background-image:url("../images/bg-pattern-circles.svg"),linear-gradient($dark__gray,$dark__blue);
+  background-repeat: no-repeat no-repeat;
+  background-size: 70% 256%, 100% 100%;
+  background-position: -51% 83%, 0% 0%;
+  margin: 6rem 0;
+  @include media(sm){
+    margin: 9rem 0;
+    background-size: 160% 115%, 100% 100%;
+    background-position: 50% 342%, 0% 0%;
+  }
+  .showcase__section{
+  @include grid();
+  padding: 10rem 8rem;
   @include media(sm) {
-    height: 58rem;
-    padding: 3rem 2.3rem;
+    background-position: 50% -1950%, 0% 0%;
+    background-size: 163% 100%;
+    padding:2rem 2.3rem;
     text-align: center;
   }
-  &__left {
+  .phone__illustration {
+    grid-column: span 6;
     @include media(sm) {
       grid-column: 1/13;
+      height: 16rem;
     }
-    grid-column: span 6;
-    overflow: hidden;
-    justify-self: center;
     img {
       @include media(sm) {
-        top: -25%;
-        left: 14%;
+        left: 7%;
+        height: 33rem;
       }
-      top: -20%;
-      left: 7%;
+      height: 54.5rem;
+      top: -26%;
+      z-index: 11;
       position: absolute;
-      height: 42rem;
-      object-fit: contain;
     }
   }
-  &__right {
+
+  .showcase__content {
     @include media(sm) {
       grid-column: 1/13;
+      padding-bottom: 7rem;
     }
     grid-column: span 6;
-    align-self: center;
     color: $text;
-    h4 {
+    align-self: center;
+    h2 {
+      font-weight: 600;
+      font-size: 3.7rem;
       padding: 2rem 0;
+      @include media(sm){
+        padding: 0 0 2rem 0;
+      }
     }
     p {
+      font-size: $p;
       line-height: 1.5;
+      letter-spacing: .035rem;
     }
   }
+}
 }
