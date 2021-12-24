@@ -615,7 +615,7 @@ nav .menu.close .show {
 
 @media (min-width: 360px) and (max-width: 478px) {
   .hero__content {
-    padding: 9rem 1rem 0 1rem;
+    padding-top: 6rem;
   }
 }
 
@@ -710,20 +710,20 @@ nav .menu.close .show {
   }
 }
 
-.describe .describe__content {
+.describe__content {
   padding: 8rem;
   padding-top: 12rem;
 }
 
 @media (min-width: 360px) and (max-width: 478px) {
-  .describe .describe__content {
+  .describe__content {
     margin-top: 6rem;
     padding: 4rem 2.5rem;
     text-align: center;
   }
 }
 
-.describe .describe__content h3 {
+.describe__content h3 {
   font-size: 3.6rem;
   font-weight: 700;
   color: #1f3f5b;
@@ -731,12 +731,12 @@ nav .menu.close .show {
 }
 
 @media (min-width: 360px) and (max-width: 478px) {
-  .describe .describe__content h3 {
+  .describe__content h3 {
     font-size: 2.8rem;
   }
 }
 
-.describe .describe__content .layout {
+.describe__content .layout {
   padding: 6rem 0;
   display: -ms-grid;
   display: grid;
@@ -745,13 +745,13 @@ nav .menu.close .show {
   grid-gap: 2rem;
 }
 
-.describe .describe__content .layout__left {
+.describe__content .layout__left {
   padding: 0 2rem;
   grid-column: span 6;
 }
 
 @media (min-width: 360px) and (max-width: 478px) {
-  .describe .describe__content .layout__left {
+  .describe__content .layout__left {
     -ms-grid-column: 1;
     -ms-grid-column-span: 12;
     grid-column: 1/13;
@@ -762,30 +762,30 @@ nav .menu.close .show {
   }
 }
 
-.describe .describe__content .layout__left h2 {
+.describe__content .layout__left h2 {
   color: #1f3f5b;
   line-height: 1;
   font-size: 2.8rem;
   padding: 2rem 0;
 }
 
-.describe .describe__content .layout__left p {
+.describe__content .layout__left p {
   font-size: 1.6rem;
   line-height: 1.6;
   font-weight: 500;
 }
 
-.describe .describe__content .layout__left h5 {
+.describe__content .layout__left h5 {
   font-weight: bold;
   padding: 2rem 0;
 }
 
-.describe .describe__content .layout__right {
+.describe__content .layout__right {
   grid-column: span 6;
 }
 
 @media (min-width: 360px) and (max-width: 478px) {
-  .describe .describe__content .layout__right {
+  .describe__content .layout__right {
     -ms-grid-column: 1;
     -ms-grid-column-span: 12;
     grid-column: 1/13;
