@@ -26,7 +26,7 @@ nav {
       @include flex(center);
       @include media(sm){
         flex-direction: column;
-        width: 100%;
+        width: 85%;
       }
     .menu__item{
       position: relative;
@@ -90,6 +90,7 @@ nav {
       flex-direction: column;
       background-color: $text;
       transition: display 200ms ease-out;
+      border-radius: .5rem;
       @include media(xlg){
       position: absolute;
       align-items: flex-start;
@@ -118,19 +119,19 @@ nav {
 }
     &.open {
       @include flex(flex-start);
-      padding: 1.5rem 0;
+      padding: 2rem 0;
       z-index: 12;
       flex-direction: column;
       position: absolute;
       background: $text;
-      height: 72vh;
+      height: 67vh;
       width: 88%;
-      top: 12rem;
+      top: 13rem;
       left: 2.2rem;
       border-radius: .5rem;
       box-shadow: 2px 6px 12px rgba(0, 0, 0, 0.507);
       .link__name{
-        padding: 1.5rem 0;
+        padding: 1rem 0;
         a{
           color: $heading;
           font-weight: 600;
@@ -138,7 +139,19 @@ nav {
         }
       }
       .btn__menu{
+        display: flex;
         flex-direction: column;
+      }
+    }
+    hr{
+      display: none;
+      @include media(sm){
+        border: none;
+        display: block;
+        background: $bg__submenu;
+        width: 85%;
+        height: .2rem;
+        margin: 2rem;
       }
     }
     .btn__menu{
@@ -157,6 +170,9 @@ nav {
         padding: 1.365rem 3.65rem;
       }
       .login{
+        @include media(sm){
+          color: $heading;
+        }
         &:hover{
           background-color: $text;
           color: $cta__text;

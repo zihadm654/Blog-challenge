@@ -1,13 +1,14 @@
 footer {
   border-radius: 0 10rem 0 0;
   background-color: $footer__bg;
-  padding: 4.5rem 12rem;
+  padding: 4.5rem 8rem;
   @include media(sm){
     padding: 4rem;
   }
   .footer__content{
   @include grid();
   color: $text;
+  // padding-right: 4rem;
   @include media(sm) {
     padding: 3rem 2.3rem;
   }
@@ -45,8 +46,19 @@ footer {
   }
     h2{
       padding: 0rem;
+      grid-column: 1/3;
       @include media(sm){
         padding-bottom: 3rem;
       }
+    }
+    .product__list{
+      grid-column: 3/6;
+    }
+    .company__list{
+      grid-column: 6/9;
+    }
+    .contact__list{
+      grid-column: 9/12;
+    }
   }
-}}
+}
