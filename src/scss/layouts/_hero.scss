@@ -1,11 +1,12 @@
 .hero {
   @include media(sm) {
     padding: 3rem 2.5rem;
-    height: 85vh;
-    background-position: 25% 54%,0% 0%;
+    height: 100vh;
+    background-position: 36% 35%,0% 0%;
+    background-size: 398% 229%, 100% 100%;
   }
   height: 80vh;
-  padding: 3rem 8rem;
+  padding: 2.7rem 8rem;
   position: relative;
   background-image:url("../images/bg-pattern-intro.svg"),linear-gradient(135deg,$primary__gradient,$secondary__gradient) ;
   color: #fff;
@@ -21,7 +22,7 @@
       padding-top: 10rem;
     }
     h2 {
-      padding: 2.5rem 0;
+      padding:1rem 0;
       font-weight: 600;
       font-family: $main__font;
       font-size: 5.508rem;
@@ -30,6 +31,7 @@
       }
     }
     p {
+      padding: .7rem 0;
       font-size: 1.9rem;
     }
     .cta__btn{
@@ -49,6 +51,7 @@
       &:not(first-child){
         margin-right: 1.5rem;
       }
+      transition: background-color 200ms ease-out;
     }
     .free {
       background-color: $text;

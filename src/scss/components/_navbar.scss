@@ -1,36 +1,52 @@
 nav {
   @include grid();
-  padding: 2rem 6rem;
   @include media(sm){
-    justify-content: space-between;
-    padding: 1rem;
+    padding: 2rem 0 1rem 0;
   }
   .nav__left {
-    grid-column: 1/3;
+    padding: 2rem 0;
+    margin-right: 2rem;
+    grid-column: 1/2;
     @include media(sm){
       grid-column: span 6;
+      padding: 0;
     }
     img {
       cursor: pointer;
-     height: 4rem; 
+      height: 3.7rem; 
     }
   }
   .nav__center {
-    grid-column: 3/13;
+    grid-column: 2/13;
     @include flex(space-between);
     @include media(sm) {
       display: none;
-      justify-content: flex-start;
     }
     .menu__items{
       @include flex(center);
-    .menu__item{
-      @include flex(center);
-      flex-direction: column;
       @include media(sm){
-        flex-direction: row;
+        flex-direction: column;
+        width: 100%;
+      }
+    .menu__item{
+      position: relative;
+      padding: 1rem 1.2rem;
+      width: 100%;
+      @include media(sm){
+        padding: 0;
+      }
+      &:hover{
+        .sub__menu{
+          display: flex;
+        }
+        img{
+          transform: rotate(180deg);
+        }
       }
       .link__name {
+        @include flex(center);
+        cursor: pointer;
+          margin: 0 1rem;
         .color{
           display: none;
         }
@@ -42,17 +58,22 @@ nav {
             display: none;
           }
         }
-          cursor: pointer;
-          margin: 0 1rem;
           a {
             text-decoration: none;
             color: $text;
-            font-size: 1.8rem;
-            font-weight: 600;
-          }
-          &:hover{
-            .sub__menu{
-              display: flex;
+            font-size: 1.7rem;
+            font-weight: 500;
+            opacity: .75;
+            @include media(sm){
+              color: $heading;
+              opacity: 1;
+              font-weight: 600;
+              font-size: 1.8rem;
+            }
+            &:hover{
+              text-decoration: underline;
+              font-weight: 600;
+              opacity: 100%;
             }
           }
       img {
@@ -60,16 +81,35 @@ nav {
       }
     }
     .sub__menu {
+      box-shadow: 6px 6px 16px rgba(0, 0, 0, 0.349);
+      border-radius: .5rem;
+      padding: 2rem;
+      width: 130%;
       @include flex(center);
+      align-items: flex-start;
       flex-direction: column;
-      width: 80%;
-      background-color: $bg__submenu;
+      background-color: $text;
+      transition: display 200ms ease-out;
+      @include media(xlg){
+      position: absolute;
+      align-items: flex-start;
+      top: 4rem;
+      }
+      @include media(sm){
+        width: 100%;
+        background-color: $bg__submenu;
+        align-items: center;
+      }
       li{
         list-style: none;
         padding: .3rem 0;
         a{
           font-size: $p;
           text-decoration: none;
+          &:hover{
+            color: $heading;
+            font-weight: 700;
+          }
         }
       }
       display: none;
@@ -83,9 +123,9 @@ nav {
       flex-direction: column;
       position: absolute;
       background: $text;
-      height: 75vh;
+      height: 72vh;
       width: 88%;
-      top: 14rem;
+      top: 12rem;
       left: 2.2rem;
       border-radius: .5rem;
       box-shadow: 2px 6px 12px rgba(0, 0, 0, 0.507);
@@ -111,17 +151,23 @@ nav {
         color: $heading;
         text-decoration: none;
         font-size: $p;
-        padding: 1.365rem 3.65rem;
         font-weight: 600;
         border-radius: 2.5rem;
+        transition: background-color 200ms ease-out;
+        padding: 1.365rem 3.65rem;
       }
       .login{
-        @include media(sm){
-
+        &:hover{
+          background-color: $text;
+          color: $cta__text;
         }
         color: $text;
       }
       .signup{
+        &:hover{
+          background-color:$cta__hover;
+          color: $text;
+        }
         color: $cta__text;
         background-color: $text;
         @include media(sm){
@@ -147,7 +193,8 @@ nav {
       }
       cursor: pointer;
       img {
-        height: 3.2rem;
+        margin-top: .4rem;
+        height: 3rem;
         width: 3.5rem;
       }
       &.active{

@@ -5,13 +5,14 @@
   background-position: 135% 100%, 0% 0%;
   background-size: 56% 92%, 100% 100%;
 @include media(sm){
-  background-position: 40% 16%, 0% 0%;
-  background-size: 106% 26%, 100% 100%;
+  background-position: 50% 14%, 0% 0%;
+  background-size: 112% 28%, 100% 100%;
   background-image: url("../images/illustration-editor-mobile.svg");
 }
   .describe__content{
   @include media(sm) {
-    padding: 3rem 4rem;
+    margin-top: 6rem;
+    padding: 4rem 2.5rem;
     text-align: center;
   }
   padding: 8rem;
