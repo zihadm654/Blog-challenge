@@ -9,7 +9,7 @@
   background-size: 108% 30%, 100% 100%;
   background-image: url("../images/illustration-editor-mobile.svg");
 }
-  .describe__content{
+  &__content{
   @include media(sm) {
     margin-top: 6rem;
     padding: 4rem 2.5rem;
