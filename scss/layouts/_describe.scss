@@ -6,8 +6,9 @@
   background-position: 135% 100%, 0% 0%;
   background-size: 59% 92%, 100% 100%;
   @include media(sm){
-    background-position: 134% 100%, 0% 0%;
-    background-size: 59% 90%, 100% 100%;
+    margin: 2rem 0;
+    background-position: 69% 14%, 0% 0%;
+    background-size: 105% 27%, 100% 100%;
   background-image: url("../images/illustration-editor-mobile.svg");
   }
   &__content{
@@ -39,12 +40,20 @@
         padding: 0;
       }
       h2{
+        @include media(sm){
+          margin-top: 0rem;
+          padding: 1.5rem 0 2.8rem 0;
+        }
+        margin-top: 4rem;
         color: $heading;
         line-height: 1;
         font-size: 2.8rem;
         padding: 2rem 0 4rem 0;
       }
       p {
+        @include media(sm){
+          margin-bottom: 3rem;
+        }
         font-size: 1.6rem;
         line-height: 1.6;
         font-weight: 500;

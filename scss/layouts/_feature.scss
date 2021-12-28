@@ -1,25 +1,27 @@
 .feature {
   position: relative;
+  margin: 8rem 0;
   background-image: url("../images/illustration-laptop-desktop.svg");
   background-repeat: no-repeat;
-  background-position: -35% 5%, 0% 0%;
-  background-size: 55% 100%, 100% 100%;
+  background-position: -53% 0%, 0% 0%;
+  background-size: 65% 100%, 100% 100%;
   @include media(sm){
-    background-position: 48% 0%, 0% 0%;
-    background-size: 126% 34% ,100% 100%;
-  background-image: url("../images/illustration-laptop-mobile.svg");
-  padding-bottom: 7rem;
+    background-position: 52% -2%, 0% 0%;
+    background-size: 130% 34%, 100% 100%;
+    background-image: url("../images/illustration-laptop-mobile.svg");
+  padding: 6rem 0;
+  margin: 8rem 0 0 0;
   }
   .feature__content{
   @include grid();
-  padding: 10rem 8rem;
+  padding: 12rem 8rem;
   @include media(sm) {
-    padding: 3rem 2rem;
+    padding: 1rem 2rem;
     text-align: center;
   }
   .feature__left {
     @include media(sm) {
-      height: 30rem;
+      height: 28rem;
       grid-column: 1/13;
     }
     grid-column: span 6;
@@ -54,15 +56,23 @@
     align-self: center;
     grid-column: span 6;
     h2 {
+      @include media(sm){
+        // margin-top: 1rem;
+        padding: 2rem 0;
+      }
+      margin-top: 3rem;
       color: $heading;
       font-size: 2.8rem;
       font-weight: 700;
-      padding: 2.5rem 0;
+      padding: 2rem 0 4rem 0;
     }
     p {
       line-height: 1.5;
       font-size: $p;
       font-weight: 500;
+      @include media(sm){
+        margin-bottom: 4rem;
+      }
     }
   }
 }

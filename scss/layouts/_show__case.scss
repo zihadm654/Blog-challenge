@@ -8,7 +8,7 @@
   background-position: -51% 83%, 0% 0%;
   margin: 6rem 0;
   @include media(sm){
-    margin: 9rem 0;
+    margin: 10rem 0;
     background-size: 160% 115%, 100% 100%;
     background-position: 50% 342%, 0% 0%;
   }
@@ -18,7 +18,7 @@
   @include media(sm) {
     background-position: 50% -1950%, 0% 0%;
     background-size: 163% 100%;
-    padding:2rem 2.3rem;
+    padding:5rem 2.3rem;
     text-align: center;
   }
   .phone__illustration {
@@ -29,8 +29,9 @@
     }
     img {
       @include media(sm) {
-        left: 7%;
-        height: 33rem;
+        left: 3%;
+        height: 37rem;
+        top: -28%;
       }
       height: 57rem;
       top: -16%;
